@@ -1,1 +1,1 @@
-# radiweb-cypress-qa
+# cypress-qa
