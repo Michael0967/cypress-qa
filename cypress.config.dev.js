@@ -7,11 +7,11 @@ const addAccessibilityTasks = require('wick-a11y/accessibility-tasks')
 
 module.exports = defineConfig({
   env: {
-    store: '',
-    password_store: '',
+    store: 'https://printemps-a-paris.myshopify.com/',
+    password_store: 'paris',
     handle_collection: '',
-    preview_theme_id: '',
-    handle_product: ''
+    preview_theme_id: '175491547484',
+    handle_product: 'the-complete-snowboard'
   },
 
   viewportWidth: 1440,

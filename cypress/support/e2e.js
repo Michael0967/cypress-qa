@@ -20,11 +20,14 @@ loadSupportCommands(commandsContext)
  * Prevents Cypress from stopping on specific errors.
  */
 const handleUncaughtException = (err) => {
+  // Here we corrected the error being searched for: 't.initialize is not a function'
   const specificErrors = [
-    'e.initialize is not a function',
+    't.initialize is not a function', // Now it's searching for the correct error message
   ]
   
+  // If the error message includes 't.initialize is not a function', Cypress will not fail the test
   return !specificErrors.some(error => err.message.includes(error))
 }
 
+// Set up the uncaught exception handler in Cypress
 Cypress.on('uncaught:exception', (err) => handleUncaughtException(err))
